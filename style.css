@@ -1,4 +1,6 @@
-/* ===== RESET ===== */
+/* =====================
+   RESET
+===================== */
 
 *{
     margin:0;
@@ -12,328 +14,668 @@ html{
 }
 
 body{
-    background:#0d1117;
-    color:#ffffff;
+    background:#080b12;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* ===== HEADER ===== */
+
+/* =====================
+   HEADER
+===================== */
 
 header{
+
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
     height:80px;
-    background:rgba(13,17,23,.90);
-    backdrop-filter:blur(10px);
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:0 8%;
-    border-bottom:1px solid #2f3542;
-    z-index:999;
+
+    background:rgba(8,11,18,0.85);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #1f2937;
+
+    z-index:1000;
+
 }
 
+
 .logo{
+
     display:flex;
     align-items:center;
     gap:12px;
+
     font-size:28px;
     font-weight:bold;
-    color:#2ea8ff;
+
+    color:#38bdf8;
+
 }
+
 
 .logo i{
-    font-size:30px;
+
+    font-size:32px;
+
 }
+
 
 nav{
+
     display:flex;
-    gap:35px;
+    gap:30px;
+
 }
+
 
 nav a{
+
     color:white;
     text-decoration:none;
+
     font-size:17px;
+
     transition:.3s;
+
 }
+
 
 nav a:hover{
-    color:#2ea8ff;
+
+    color:#38bdf8;
+
 }
 
-/* ===== HERO ===== */
+
+/* =====================
+   HOME
+===================== */
 
 .hero{
-    height:100vh;
+
+    min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    padding:20px;
+
+    padding:100px 20px;
+
     background:
-    radial-gradient(circle at top,#1b4cff22,#0d1117);
+
+    radial-gradient(
+        circle at top,
+        #1d4ed833,
+        transparent 50%
+    );
+
 }
+
+
+.hero-content{
+
+    animation:show 1s ease;
+
+}
+
 
 .hero h1{
-    font-size:72px;
-    color:#2ea8ff;
+
+    font-size:75px;
+
+    color:#38bdf8;
+
+    text-shadow:
+    0 0 20px #38bdf8;
+
 }
+
 
 .hero p{
+
     margin-top:20px;
-    font-size:23px;
-    color:#c9d1d9;
+
+    font-size:24px;
+
+    color:#cbd5e1;
+
 }
+
 
 .hero-buttons{
+
     margin-top:40px;
+
     display:flex;
+
     justify-content:center;
+
     gap:20px;
-    flex-wrap:wrap;
+
 }
 
-.main-btn,
-.telegram-btn{
-    padding:16px 38px;
+
+.store-btn,
+.profile-btn{
+
+    padding:16px 40px;
+
     border-radius:12px;
+
     text-decoration:none;
+
     color:white;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
-.main-btn{
-    background:#238636;
+
+.store-btn{
+
+    background:#2563eb;
+
 }
 
-.main-btn:hover{
-    background:#2ea043;
-    transform:translateY(-4px);
+
+.profile-btn{
+
+    background:#16a34a;
+
 }
 
-.telegram-btn{
-    background:#229ED9;
+
+.store-btn:hover,
+.profile-btn:hover{
+
+    transform:translateY(-5px);
+
+    filter:brightness(1.2);
+
 }
 
-.telegram-btn:hover{
-    background:#1b8bc4;
-    transform:translateY(-4px);
+
+@keyframes show{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
-/* ========================= */
-/* STORE */
-/* ========================= */
+/* =====================
+   STORE
+===================== */
 
 .store{
+
     padding:120px 8%;
+
 }
+
 
 .store h2{
+
     text-align:center;
-    font-size:45px;
-    color:#2ea8ff;
-    margin-bottom:50px;
+
+    font-size:50px;
+
+    color:#38bdf8;
+
+    margin-bottom:60px;
+
 }
+
 
 .store-grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
     gap:35px;
+
 }
+
+
+/* CARD */
 
 .card{
-    background:#161b22;
-    border:1px solid #30363d;
-    border-radius:20px;
+
+    background:#111827;
+
+    border:1px solid #1f2937;
+
+    border-radius:25px;
+
     overflow:hidden;
-    transition:.35s;
+
+    transition:.5s;
+
+    animation:cardShow .8s ease;
+
 }
+
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px rgba(46,168,255,.25);
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 35px #38bdf855;
+
 }
+
 
 .card img{
+
     width:100%;
+
     height:220px;
+
     object-fit:cover;
+
 }
+
+
+.card-content{
+
+    padding:25px;
+
+}
+
 
 .card h3{
-    padding:20px 20px 10px;
-    font-size:28px;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
 }
+
+
+/* PRICE */
 
 .price{
-    padding:0 20px;
-    color:#2ea8ff;
-    font-size:24px;
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    padding:8px 20px;
+
+    border-radius:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:20px;
+
     font-weight:bold;
+
+    animation:
+    priceGlow 2s infinite;
+
 }
 
-.buttons{
-    display:flex;
-    gap:15px;
-    padding:25px 20px;
+
+.card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:25px;
+
 }
+
+
+/* BUTTONS */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
 
 .telegram,
 .buy{
+
     flex:1;
+
     text-align:center;
-    text-decoration:none;
-    color:white;
+
     padding:14px;
-    border-radius:10px;
+
+    border-radius:12px;
+
+    color:white;
+
+    text-decoration:none;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
+
 
 .telegram{
+
     background:#229ED9;
+
 }
 
-.telegram:hover{
-    background:#1b8bc4;
-}
 
 .buy{
-    background:#238636;
+
+    background:#16a34a;
+
 }
 
+
+.telegram:hover,
 .buy:hover{
-    background:#2ea043;
+
+    transform:scale(1.08);
+
+    filter:brightness(1.15);
+
 }
-/* ========================= */
-/* PROFILE */
-/* ========================= */
+
+
+/* ANIMATIONS */
+
+@keyframes cardShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes priceGlow{
+
+    0%{
+
+        box-shadow:
+        0 0 0 transparent;
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 20px #38bdf8;
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 transparent;
+
+    }
+
+}
+/* =====================
+   PROFILE
+===================== */
 
 .profile{
+
     padding:120px 8%;
+
 }
+
 
 .profile h2{
+
     text-align:center;
-    font-size:45px;
-    color:#2ea8ff;
-    margin-bottom:45px;
+
+    font-size:50px;
+
+    color:#38bdf8;
+
+    margin-bottom:50px;
+
 }
+
 
 .profile-card{
+
     max-width:450px;
+
     margin:auto;
-    background:#161b22;
-    border:1px solid #30363d;
-    border-radius:20px;
+
     padding:35px;
+
     text-align:center;
-    transition:.3s;
+
+    background:#111827;
+
+    border:1px solid #1f2937;
+
+    border-radius:25px;
+
+    transition:.4s;
+
 }
+
 
 .profile-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(46,168,255,.25);
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 30px #38bdf855;
+
 }
+
 
 .profile-card img{
-    width:140px;
-    height:140px;
+
+    width:150px;
+
+    height:150px;
+
     border-radius:50%;
+
+    border:4px solid #38bdf8;
+
     margin-bottom:20px;
-    border:4px solid #2ea8ff;
+
 }
+
 
 .profile-card h3{
+
     font-size:30px;
-    margin-bottom:10px;
+
+    margin-bottom:15px;
+
 }
+
 
 .profile-card p{
-    color:#c9d1d9;
+
+    color:#cbd5e1;
+
     margin-bottom:30px;
+
 }
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
+
+/* =====================
+   FOOTER
+===================== */
+
 
 footer{
-    margin-top:80px;
-    background:#161b22;
-    border-top:1px solid #30363d;
+
+    background:#111827;
+
     padding:50px 8%;
+
     text-align:center;
+
+    border-top:1px solid #1f2937;
+
 }
+
 
 .footer-content h2{
-    color:#2ea8ff;
+
+    color:#38bdf8;
+
     margin-bottom:15px;
+
 }
+
 
 .footer-content p{
-    color:#c9d1d9;
+
+    color:#cbd5e1;
+
     margin-bottom:25px;
+
 }
 
-.footer-links{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
 
-.footer-links a{
+.telegram-footer{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 35px;
+
+    background:#229ED9;
+
     color:white;
+
     text-decoration:none;
+
+    border-radius:12px;
+
     transition:.3s;
+
 }
 
-.footer-links a:hover{
-    color:#2ea8ff;
+
+.telegram-footer:hover{
+
+    transform:scale(1.08);
+
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
 
-@media(max-width:900px){
+/* =====================
+   MOBILE
+===================== */
 
-    header{
-        flex-direction:column;
-        height:auto;
-        padding:20px;
-    }
 
-    nav{
-        margin-top:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-    }
+@media(max-width:800px){
 
-    .hero h1{
-        font-size:48px;
-    }
 
-    .hero p{
-        font-size:18px;
-    }
+header{
 
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
+    flex-direction:column;
 
-    .main-btn,
-    .telegram-btn{
-        width:230px;
-    }
+    height:auto;
 
-    .buttons{
-        flex-direction:column;
-    }
+    padding:20px;
+
+}
+
+
+nav{
+
+    margin-top:15px;
+
+    gap:15px;
+
+}
+
+
+.hero h1{
+
+    font-size:45px;
+
+}
+
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+
+.store-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.buttons{
+
+    flex-direction:column;
+
+}
+
 
 }
