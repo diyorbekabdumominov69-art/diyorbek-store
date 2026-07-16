@@ -679,3 +679,211 @@ nav{
 
 
 }
+/* =====================
+   PREMIUM EFFECTS
+===================== */
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at 20% 20%,#38bdf822,transparent 30%),
+    radial-gradient(circle at 80% 80%,#2563eb22,transparent 30%);
+
+    z-index:-1;
+
+}
+
+
+/* LOGO EFFECT */
+
+.logo{
+
+    text-shadow:
+    0 0 10px #38bdf8,
+    0 0 30px #38bdf8;
+
+}
+
+
+.logo i{
+
+    animation:shield 2s infinite;
+
+}
+
+
+@keyframes shield{
+
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+
+50%{
+
+transform:rotate(10deg) scale(1.1);
+
+}
+
+
+100%{
+
+transform:rotate(0deg);
+
+}
+
+
+}
+
+
+
+/* HEADER BLUR */
+
+header{
+
+    box-shadow:
+    0 10px 40px #00000080;
+
+}
+
+
+
+/* CARD PREMIUM */
+
+.card{
+
+    backdrop-filter:blur(15px);
+
+    background:
+    linear-gradient(
+    145deg,
+    #111827,
+    #0b1220
+    );
+
+}
+
+
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+}
+
+
+.card:hover h3{
+
+    color:#38bdf8;
+
+    transition:.3s;
+
+}
+
+
+
+
+/* BUTTON GLOW */
+
+.buy,
+.store-btn{
+
+
+    box-shadow:
+    0 0 15px #16a34a55;
+
+
+}
+
+
+.telegram{
+
+
+    box-shadow:
+    0 0 15px #229ed955;
+
+
+}
+
+
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#080b12;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#38bdf8;
+
+    border-radius:20px;
+
+}
+
+
+
+/* MOBILE LOGO */
+
+@media(max-width:500px){
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+.logo i{
+
+    font-size:25px;
+
+}
+
+
+nav a{
+
+    font-size:14px;
+
+}
+
+
+.store h2,
+.profile h2{
+
+    font-size:35px;
+
+}
+
+
+
+}
